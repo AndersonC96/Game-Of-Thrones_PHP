@@ -41,7 +41,7 @@
                         <td>Publisher</td>
                         <td>Country</td>
                         <td>Media Type</td>
-                        <td>Released</td>
+                        <!--<td>Released</td>-->
                         <td>Number of Characters</td>
                     </thead>
                     <?php
@@ -56,7 +56,7 @@
                             echo "<td>".$obj["publisher"]."</td>";
                             echo "<td>".$obj["country"]."</td>";
                             echo "<td>".$obj["mediaType"]."</td>";
-                            echo "<td>".$obj["released"]."</td>";
+                            //echo "<td>".$obj["released"]."</td>";
                             echo "<td>".count($obj["characters"])."</td>";
                             echo "</tr>";
                         }

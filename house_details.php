@@ -40,6 +40,7 @@
                         echo "<tr><td>Founded</td><td>".$json["founded"]."</td></tr>";
                         echo "<tr><td>Died Out</td><td>".$json["diedOut"]."</td></tr>";
                         echo "<tr><td>Ancestral Weapons</td><td>".implode(", ",$json["ancestralWeapons"])."</td></tr>";
+                        echo "<tr><td>Cadet Branches</td><td>".implode(", ",$json["cadetBranches"])."</td></tr>";
                     ?>
                 </table>
             </div>

@@ -38,7 +38,7 @@
                         <td>Died</td>
                         <td>Titles</td>
                         <td>Aliases</td>
-                        <td>Played By</td>
+                        <!--<td>Played By</td>-->
                     </thead>
                     <?php
                         foreach($json as $obj){
@@ -52,7 +52,7 @@
                             echo "<td>".$obj["died"]."</td>";
                             echo "<td>".$obj["titles"][0]."</td>";
                             echo "<td><a href='character_details.php/$id' target='blank'>".$obj["aliases"][0]."</a></td>";
-                            echo "<td>".$obj["playedBy"][0]."</td>";
+                            //echo "<td>".$obj["playedBy"][0]."</td>";
                             echo "</tr>";
                         }
                     ?>

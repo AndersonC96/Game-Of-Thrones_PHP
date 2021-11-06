@@ -39,9 +39,9 @@
                         echo "<tr><td>Country</td><td>".$json["country"]."</td></tr>";
                         echo "<tr><td>Media Type</td><td>".$json["mediaType"]."</td></tr>";
                         echo "<tr><td>Number of Characters</td><td>".count($json["characters"])."</td></tr>";
-                        echo "<tr><td>Released</td><td>".count($json["released"])."</td></tr>";
-                        echo "<tr><td>Pov Characters</td><td>".implode(", ",$json["povCharacters"])."</td></tr>";
-                        echo "<tr><td>Characters</td><td>".implode(", ",$json["characters"])."</td></tr>";
+                        echo "<tr><td>Released</td><td>".$json["released"]."</td></tr>";
+                        //echo "<tr><td>Pov Characters</td><td>".implode(", ",$json["povCharacters"])."</td></tr>";
+                        //echo "<tr><td>Characters</td><td>".implode(", ",$json["characters"])."</td></tr>";
                     ?>
                 </table>
             </div>

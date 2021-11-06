@@ -38,8 +38,11 @@
                         echo "<tr><td>Born </td><td>".$json["born"]."</td></tr>";
                         echo "<tr><td>Died </td><td>".$json["died"]."</td></tr>";
                         echo "<tr><td>Titles </td><td>".implode(", ",$json["titles"])."</td></tr>";
+                        /*echo "<tr><td>Father </td><td>".$json["father"]."</td></tr>";
+                        echo "<tr><td>Mother </td><td>".$json["mother"]."</td></tr>";
+                        echo "<tr><td>Spouse </td><td>".$json["spouse"]."</td></tr>";*/
                         echo "<tr><td>Tv Series </td><td>".implode(", ",$json["tvSeries"])."</td></tr>";
-                        echo "<tr><td>Played By </td><td>".implode(", ",$json["playedBy"])."</td></tr>";
+                        echo "<tr><td>Actor </td><td>".implode(", ",$json["playedBy"])."</td></tr>";
                     ?>
                 </table>
             </div>

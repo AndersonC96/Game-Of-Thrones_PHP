@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>A Song of Ice and Fire | Houses</title>
+        <title>As Crônicas de Gelo e Fogo | Casas</title>
         <link rel="shortcut icon" href="./favicon.ico"/>
         <embed name="myMusic" loop="true" hidden="true" src="./music.mp3">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -23,26 +23,29 @@
         ?>
         <div class="container">
             <ul class="nav nav-tabs">
-                <li><a href="index.php">Books</a></li>
-                <li class="active"><a href="houses.php">Houses</a></li>
-                <li><a href="characters.php">Characters</a></li>
+                <li><a href="index.php">Livro</a></li>
+                <li class="active"><a href="houses.php">Casas</a></li>
+                <li><a href="characters.php">Personagens</a></li>
             </ul>
-            <h1>Houses of A Song of Ice and Fire</h1>
+            <h1>Casas de As Crônicas de Gelo e Fogo</h1>
             <div class="table-bordered">
                 <table class="table">
                     <thead>
                         <td hidden>URL</td>
-                        <td>Name</td>
-                        <td>Region</td>
-                        <td>Coat Of Arms</td>
+                        <td>Nome</td>
+                        <td>Região</td>
+                        <td>Brazão</td>
                         <td>Words</td>
-                        <td>Titles</td>
+                        <td>Títulos</td>
+                        <!--<td>Lord</td>-->
                         <td>Seats</td>
-                        <td>Founded</td>
-                        <td>Ancestral Weapons</td>
-                        <td>Died Out</td>
+                        <!--<td>Fundador</td>-->
+                        <td>Criada</td>
+                        <td>Armas Ancestrais</td>
+                        <td>Extinção</td>
                     </thead>
                     <?php
+                        error_reporting(E_ERROR | E_PARSE);// Desativa mensagens de erro
                         foreach($json as $obj){
                             $id = str_replace("https://anapioficeandfire.com/api/houses/","",$obj["url"]);
                             echo "<tr>";
@@ -52,7 +55,9 @@
                             echo "<td>".$obj["coatOfArms"]."</td>";
                             echo "<td>".$obj["words"]."</td>";
                             echo "<td>".$obj["titles"][0]."</td>";
+                            //echo "<td>".$obj["heir"]."</td>";
                             echo "<td>".$obj["seats"][0]."</td>";
+                            //echo "<td>".$obj["cadetBranches"][0]."</td>";
                             echo "<td>".$obj["founded"]."</td>";
                             echo "<td>".$obj["ancestralWeapons"][0]."</td>";
                             echo "<td>".$obj["diedOut"]."</td>";
@@ -61,8 +66,8 @@
                     ?>
                 </table>
                 <ul class="pager">
-                    <li class="previous"><a href="#">Previous</a></li>
-                    <li class="next"><a href="#">Next</a></li>
+                    <li class="previous"><a href="#">Anterior</a></li>
+                    <li class="next"><a href="#">Próxima</a></li>
                 </ul>
             </div>
         </div>

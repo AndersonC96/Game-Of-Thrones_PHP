@@ -23,23 +23,24 @@
         ?>
         <div class="container">
             <ul class="nav nav-tabs">
-                <li class="active"><a href="./index.php">Books</a></li>
-                <li><a href="./houses.php">Houses</a></li>
-                <li><a href="./characters.php">Characters</a></li>
+                <li class="active"><a href="./index.php">Livros</a></li>
+                <li><a href="./houses.php">Casas</a></li>
+                <li><a href="./characters.php">Personagens</a></li>
             </ul>
-            <h2>Book Details</h2>
+            <h2>Detalhes do livro</h2>
             <div class="table-bordered">
                 <table class="table">
                     <?php
-                        echo "<tr><td>Name</td><td>".$json["name"]."</td></tr>";
-                        echo "<tr><td>ISBN</td><td>".$json["isbn"]."</td></tr>";
-                        echo "<tr><td>Authors</td><td>".implode(", ",$json["authors"])."</td></tr>";
-                        echo "<tr><td>Number of Pages</td><td>".$json["numberOfPages"]."</td></tr>";
-                        echo "<tr><td>Publisher</td><td>".$json["publisher"]."</td></tr>";
-                        echo "<tr><td>Country</td><td>".$json["country"]."</td></tr>";
-                        echo "<tr><td>Media Type</td><td>".$json["mediaType"]."</td></tr>";
-                        echo "<tr><td>Number of Characters</td><td>".count($json["characters"])."</td></tr>";
-                        echo "<tr><td>Released</td><td>".$json["released"]."</td></tr>";
+                        echo "<tr><td><b>Nome</b></td><td>".$json["name"]."</td></tr>";
+                        echo "<tr><td><b>ISBN</b></td><td>".$json["isbn"]."</td></tr>";
+                        echo "<tr><td><b>Autores</b></td><td>".implode(", ",$json["authors"])."</td></tr>";
+                        echo "<tr><td><b>Número de páginas</b></td><td>".$json["numberOfPages"]."</td></tr>";
+                        echo "<tr><td><b>Editora</b></td><td>".$json["publisher"]."</td></tr>";
+                        echo "<tr><td><b>País</b></td><td>".$json["country"]."</td></tr>";
+                        echo "<tr><td><b>Tipo de mídia</b></td><td>".$json["mediaType"]."</td></tr>";
+                        echo "<tr><td><b>Número de personagens</b></td><td>".count($json["characters"])."</td></tr>";
+                        //echo "<tr><td>Released</td><td>".$json["released"]."</td></tr>";
+                        echo "<tr><td><b>Lançamento</b></td><td>".date ("d/m/Y", strtotime($json["released"]))."</td></tr>";
                         //echo "<tr><td>Pov Characters</td><td>".implode(", ",$json["povCharacters"])."</td></tr>";
                         //echo "<tr><td>Characters</td><td>".implode(", ",$json["characters"])."</td></tr>";
                     ?>

@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>A Song of Ice and Fire | Game of Thrones</title>
+        <title>As Crônicas de Gelo e Fogo | Game of Thrones</title>
         <link rel="shortcut icon" href="./favicon.ico"/>
         <embed name="myMusic" loop="true" hidden="true" src="./music.mp3">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -25,24 +25,24 @@
         ?>
         <div class="container">
             <ul class="nav nav-tabs">
-                <li class="active"><a href="./index.php">Books</a></li>
-                <li><a href="./houses.php">Houses</a></li>
-                <li><a href="./characters.php">Characters</a></li>
+                <li class="active"><a href="./index.php">Livros</a></li>
+                <li><a href="./houses.php">Casas</a></li>
+                <li><a href="./characters.php">Personages</a></li>
             </ul>
-            <h2>Books of A Song of Ice and Fire</h2>
+            <h2>Livros of As Crônicas de Gelo e Fogo</h2>
             <div class="table-bordered">
                 <table class="table">
                     <thead>
                         <td hidden>URL</td>
-                        <td>Name</td>
+                        <td>Nome</td>
                         <td>ISBN</td>
-                        <td>Authors</td>
-                        <td>Number Of Pages</td>
-                        <td>Publisher</td>
-                        <td>Country</td>
-                        <td>Media Type</td>
-                        <!--<td>Released</td>-->
-                        <td>Number of Characters</td>
+                        <td>Autores</td>
+                        <td>Número de páginas</td>
+                        <td>Editora</td>
+                        <td>País</td>
+                        <td>Tipo de mídia</td>
+                        <td>Released</td>
+                        <td>Número de personagens</td>
                     </thead>
                     <?php
                         foreach($json as $obj){
@@ -56,7 +56,8 @@
                             echo "<td>".$obj["publisher"]."</td>";
                             echo "<td>".$obj["country"]."</td>";
                             echo "<td>".$obj["mediaType"]."</td>";
-                            //echo "<td>".$obj["released"]."</td>";
+                            //echo "<td>".$obj["released"]."</td>";//date("d/m/Y", strtotime($obj["released"]))."</td>";
+                            echo "<td>".date("d/m/Y", strtotime($obj["released"]))."</td>";
                             echo "<td>".count($obj["characters"])."</td>";
                             echo "</tr>";
                         }

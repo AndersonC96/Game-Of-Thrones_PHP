@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>A Song of Ice and Fire | Characters</title>
+        <title>As Crônicas de Gelo e Fogo | Personagens</title>
         <link rel="shortcut icon" href="./favicon.ico"/>
         <embed name="myMusic" loop="true" hidden="true" src="./music.mp3">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -22,22 +22,22 @@
         ?>
         <div class="container">
             <ul class="nav nav-tabs">
-                <li><a href="index.php">Books</a></li>
-                <li><a href="houses.php">Houses</a></li>
-                <li  class="active"><a href="characters.php">Characters</a></li>
+                <li><a href="index.php">Livros</a></li>
+                <li><a href="houses.php">Casas</a></li>
+                <li  class="active"><a href="characters.php">Personagens</a></li>
             </ul>
-            <h1>Characters</h1>
+            <h1>Personagens</h1>
             <div class="table-bordered">
                 <table class="table">
                     <thead>
                         <td hidden>URL</td>
-                        <td>Name</td>
-                        <td>Gender</td>
-                        <td>Culture</td>
-                        <td>Born</td>
-                        <td>Died</td>
-                        <td>Titles</td>
-                        <td>Aliases</td>
+                        <td>Nome</td>
+                        <td>Gênero</td>
+                        <td>Cultura</td>
+                        <td>Nascimento</td>
+                        <td>Morte</td>
+                        <td>Títulos</td>
+                        <td>Apelido(s)</td>
                         <!--<td>Played By</td>-->
                     </thead>
                     <?php

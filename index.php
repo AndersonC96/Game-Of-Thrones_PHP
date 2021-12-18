@@ -41,7 +41,7 @@
                         <td>Editora</td>
                         <td>País</td>
                         <td>Tipo de mídia</td>
-                        <td>Released</td>
+                        <td>Lançamento</td>
                         <td>Número de personagens</td>
                     </thead>
                     <?php

@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>A Song of Ice and Fire | Books</title>
+        <title>As Crônicas de Gelo e Fogo | Livros</title>
         <link rel="shortcut icon" href="./favicon.ico"/>
         <embed name="myMusic" loop="true" hidden="true" src="./music.mp3">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">

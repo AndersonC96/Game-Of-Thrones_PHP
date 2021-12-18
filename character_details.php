@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>A Song of Ice and Fire | Characters</title>
+        <title>As Crônicas de Gelo e Fogo | Personagens</title>
         <link rel="shortcut icon" href="./favicon.ico"/>
         <embed name="myMusic" loop="true" hidden="true" src="./music.mp3">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -23,26 +23,28 @@
         ?>
         <div class="container">
             <ul class="nav nav-tabs">
-                <li><a href="./index.php">Books</a></li>
-                <li><a href="./houses.php">Houses</a></li>
-                <li  class="active"><a href="./characters.php">Characters</a></li>
+                <li><a href="./index.php">Livros</a></li>
+                <li><a href="./houses.php">Casas</a></li>
+                <li  class="active"><a href="./characters.php">Personagens</a></li>
             </ul>
-            <h1>Character Detail</h1>
+            <h1>Detalhes do personagem</h1>
             <div class="table-bordered">
                 <table class="table">
                     <?php
-                        echo "<tr><td>Name </td><td>".$json["name"]."</td></tr>";
-                        echo "<tr><td>Aliases </td><td>".implode(", ",$json["aliases"])."</td></tr>";
-                        echo "<tr><td>Gender </td><td>".$json["gender"]."</td></tr>";
-                        echo "<tr><td>Culture </td><td>".$json["culture"]."</td></tr>";
-                        echo "<tr><td>Born </td><td>".$json["born"]."</td></tr>";
-                        echo "<tr><td>Died </td><td>".$json["died"]."</td></tr>";
-                        echo "<tr><td>Titles </td><td>".implode(", ",$json["titles"])."</td></tr>";
+                        echo "<tr><td><b>Nome</b></td><td>".$json["name"]."</td></tr>";
+                        echo "<tr><td><b>Apelido(s)</b></td><td>".implode(", ",$json["aliases"])."</td></tr>";
+                        echo "<tr><td><b>Gênero</b></td><td>".$json["gender"]."</td></tr>";
+                        echo "<tr><td><b>Cultura</b></td><td>".$json["culture"]."</td></tr>";
+                        echo "<tr><td><b>Nascimento</b></td><td>".$json["born"]."</td></tr>";
+                        echo "<tr><td><b>Morte</b></td><td>".$json["died"]."</td></tr>";
+                        echo "<tr><td><b>Títulos</b></td><td>".implode(", ",$json["titles"])."</td></tr>";
+                        echo "<tr><td><b>Pai</b></td><td>".$json["father"]."</td></tr>";
+                        echo "<tr><td><b>Mãe</b></td><td>".$json["mother"]."</td></tr>";
                         /*echo "<tr><td>Father </td><td>".$json["father"]."</td></tr>";
                         echo "<tr><td>Mother </td><td>".$json["mother"]."</td></tr>";
                         echo "<tr><td>Spouse </td><td>".$json["spouse"]."</td></tr>";*/
-                        echo "<tr><td>Tv Series </td><td>".implode(", ",$json["tvSeries"])."</td></tr>";
-                        echo "<tr><td>Actor </td><td>".implode(", ",$json["playedBy"])."</td></tr>";
+                        echo "<tr><td><b>Série de TV</b></td><td>".implode(", ",$json["tvSeries"])."</td></tr>";
+                        echo "<tr><td><b>Ator/Atriz</b></td><td>".implode(", ",$json["playedBy"])."</td></tr>";
                     ?>
                 </table>
             </div>

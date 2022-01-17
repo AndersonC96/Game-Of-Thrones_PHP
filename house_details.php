@@ -34,9 +34,9 @@
                         echo "<tr><td><span><b>Nome</b></span></td><td>".$json["name"]."</td></tr>";
                         echo "<tr><td><b>Região</b></td><td>".$json["region"]."</td></tr>";
                         echo "<tr><td><b>Brazão</b></td><td>".$json["coatOfArms"]."</td></tr>";
-                        echo "<tr><td><b>Words</b></td><td>".$json["words"]."</td></tr>";
+                        echo "<tr><td><b>Lema</b></td><td>".$json["words"]."</td></tr>";
                         echo "<tr><td><b>Títulos</b></td><td>".implode(", ",$json["titles"])."</td></tr>";
-                        echo "<tr><td><b>Seats</b></td><td>".implode(", ",$json["seats"])."</td></tr>";
+                        echo "<tr><td><b>Residência</b></td><td>".implode(", ",$json["seats"])."</td></tr>";
                         echo "<tr><td><b>Criação</b></td><td>".$json["founded"]."</td></tr>";
                         echo "<tr><td><b>Fundador</b></td><td>".$json["founder"]."</td></tr>";
                         echo "<tr><td><b>Extinção</b></td><td>".$json["diedOut"]."</td></tr>";

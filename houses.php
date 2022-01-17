@@ -58,6 +58,7 @@
                             //echo "<td>".$obj["heir"]."</td>";
                             echo "<td>".$obj["seats"][0]."</td>";
                             //echo "<td>".$obj["cadetBranches"][0]."</td>";
+                            //echo "<td>".$obj["overlord"]."</td>";
                             echo "<td>".$obj["founded"]."</td>";
                             echo "<td>".$obj["ancestralWeapons"][0]."</td>";
                             echo "<td>".$obj["diedOut"]."</td>";

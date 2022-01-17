@@ -35,10 +35,10 @@
                         <td>Nome</td>
                         <td>Região</td>
                         <td>Brazão</td>
-                        <td>Words</td>
+                        <td>Lema</td>
                         <td>Títulos</td>
                         <!--<td>Lord</td>-->
-                        <td>Seats</td>
+                        <td>Residência</td>
                         <!--<td>Fundador</td>-->
                         <td>Criada</td>
                         <td>Armas Ancestrais</td>

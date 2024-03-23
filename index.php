@@ -1,11 +1,11 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>As Crônicas de Gelo e Fogo | Game of Thrones</title>
         <link rel="shortcut icon" href="./favicon.ico"/>
-        <embed name="myMusic" loop="true" hidden="true" src="./music.mp3">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
     </head>
     <body>
         <?php
@@ -23,47 +23,67 @@
                 return date("d/m/Y", strtotime($released));
             }
         ?>
-        <div class="container">
-            <ul class="nav nav-tabs">
-                <li class="active"><a href="./index.php">Livros</a></li>
-                <li><a href="./houses.php">Casas</a></li>
-                <li><a href="./characters.php">Personages</a></li>
+        <nav class="container-fluid">
+            <ul>
+                <li><strong>Game of Thrones</strong></li>
             </ul>
-            <h2>Livros of As Crônicas de Gelo e Fogo</h2>
-            <div class="table-bordered">
-                <table class="table">
-                    <thead>
-                        <td hidden>URL</td>
-                        <td>Nome</td>
-                        <td>ISBN</td>
-                        <td>Autores</td>
-                        <td>Número de páginas</td>
-                        <td>Editora</td>
-                        <td>País</td>
-                        <td>Tipo de mídia</td>
-                        <td>Lançamento</td>
-                        <td>Número de personagens</td>
-                    </thead>
-                    <?php
-                        foreach($json as $obj){
-                            $id = str_replace("https://anapioficeandfire.com/api/books/","",$obj["url"]);
-                            echo "<tr>";
-                            echo "<td hidden>".$obj["url"]."</td>";
-                            echo "<td><a href='books.php/$id' target='blank'>".$obj["name"]."</a></td>";
-                            echo "<td>".$obj["isbn"]."</td>";
-                            echo "<td>".$obj["authors"][0]."</td>";
-                            echo "<td>".$obj["numberOfPages"]."</td>";
-                            echo "<td>".$obj["publisher"]."</td>";
-                            echo "<td>".$obj["country"]."</td>";
-                            echo "<td>".$obj["mediaType"]."</td>";
-                            //echo "<td>".$obj["released"]."</td>";//date("d/m/Y", strtotime($obj["released"]))."</td>";
-                            echo "<td>".date("d/m/Y", strtotime($obj["released"]))."</td>";
-                            echo "<td>".count($obj["characters"])."</td>";
-                            echo "</tr>";
-                        }
-                    ?>
-                </table>
+            <ul>
+                <li><a href="./index.php">Livros</a></li>
+                <li><a href="./houses.php">Casas</a></li>
+                <li><a href="./characters.php">Personagens</a></li>
+            </ul>
+        </nav>
+        <main class="container">
+            <div class="grid">
+                <section>
+                    <hgroup>
+                        <h2>Livros de As Crônicas de Gelo e Fogo</h2>
+                        <h3>Explore a saga épica</h3>
+                    </hgroup>
+                    <p>Descubra os detalhes de cada livro da série que inspirou a aclamada série de TV Game of Thrones.</p>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>ISBN</th>
+                                    <th>Autores</th>
+                                    <th>Número de páginas</th>
+                                    <th>Editora</th>
+                                    <th>País</th>
+                                    <th>Tipo de mídia</th>
+                                    <th>Lançamento</th>
+                                    <th>Número de personagens</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                    foreach($json as $obj){
+                                        $id = str_replace("https://anapioficeandfire.com/api/books/","",$obj["url"]);
+                                        echo "<tr>";
+                                        echo "<td hidden>".$obj["url"]."</td>";
+                                        echo "<td><a href='books.php/$id' target='blank'>".$obj["name"]."</a></td>";
+                                        echo "<td>".$obj["isbn"]."</td>";
+                                        echo "<td>".$obj["authors"][0]."</td>";
+                                        echo "<td>".$obj["numberOfPages"]."</td>";
+                                        echo "<td>".$obj["publisher"]."</td>";
+                                        echo "<td>".$obj["country"]."</td>";
+                                        echo "<td>".$obj["mediaType"]."</td>";
+                                        echo "<td>".date("d/m/Y", strtotime($obj["released"]))."</td>";
+                                        echo "<td>".count($obj["characters"])."</td>";
+                                        echo "</tr>";
+                                    }
+                                ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
             </div>
-        </div>
+        </main>
+        <footer class="container">
+            <small>
+                <a href="#">Política de Privacidade</a> • <a href="#">Termos de Uso</a>
+            </small>
+        </footer>
     </body>
 </html>

@@ -2,6 +2,7 @@
     "require": {
         "bramus/router": "^1.6",
         "twig/twig": "^3.14",
-        "respect/validation": "^2.3"
+        "respect/validation": "^2.3",
+        "voku/anti-xss": "^4.1"
     }
 }

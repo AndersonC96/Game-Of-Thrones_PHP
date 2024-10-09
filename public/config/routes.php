@@ -1,5 +1,7 @@
 <?php
     $routes = [
+        '/test' => 'TestController@index',
+        '/hello/{name}' => 'TestController@hello',
         '/characters' => 'CharacterController@index',
         '/characters/{id}' => 'CharacterController@show',
         '/houses' => 'HouseController@index',

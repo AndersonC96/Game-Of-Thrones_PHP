@@ -6,9 +6,9 @@
                 <div class="card mb-4">
                     <div class="card-body">
                         <h5 class="card-title"><?= htmlspecialchars($book['name']); ?></h5>
-                        <p class="card-text">Autor: <?= htmlspecialchars($book['author']); ?></p>
-                        <p class="card-text">Data de Publicação: <?= htmlspecialchars($book['release_date']); ?></p>
-                        <a href="/books/details/<?= htmlspecialchars($book['id']); ?>" class="btn btn-primary">Ver detalhes</a>
+                        <p class="card-text">Autor: <?= htmlspecialchars($book['authors'][0]); ?></p>
+                        <p class="card-text">Data de lançamento: <?= htmlspecialchars($book['released']) ? htmlspecialchars(date('d/m/Y', strtotime($book['released']))) : 'Data não disponível'; ?></p>
+                        <a href="/books/details?id=<?= urlencode(basename($book['url'])) ?>" class="btn btn-primary">Ver detalhes</a>
                     </div>
                 </div>
             </div>

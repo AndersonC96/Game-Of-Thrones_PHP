@@ -3,8 +3,8 @@
     <div class="card">
         <div class="card-body">
             <h5 class="card-title"><?= htmlspecialchars($book['name']); ?></h5>
-            <p class="card-text">Autor: <?= htmlspecialchars($book['author']); ?></p>
-            <p class="card-text">Data de Publicação: <?= htmlspecialchars($book['release_date']); ?></p>
+            <p class="card-text">Autor: <?= htmlspecialchars($book['authors'][0]); ?></p>
+            <p class="card-text">Data de Publicação: <?= htmlspecialchars(date('d/m/Y', strtotime($book['released']))); ?></p>
             <p class="card-text">Resumo: <?= nl2br(htmlspecialchars($book['summary'])); ?></p>
             <a href="/books" class="btn btn-secondary">Voltar à lista</a>
         </div>

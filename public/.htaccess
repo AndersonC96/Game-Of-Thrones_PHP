@@ -1,0 +1,12 @@
+# Liga o mecanismo de reescrita de URL
+RewriteEngine On
+
+# Redireciona todas as requisições para o index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]
+
+# Configuração adicional para permitir o uso de arquivos CSS, JS, etc.
+<FilesMatch "\.(css|js|png|jpg|jpeg|gif|ico)$">
+    Header set Cache-Control "max-age=2592000, public"
+</FilesMatch>

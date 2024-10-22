@@ -1,0 +1,66 @@
+/* Estilo para o cabeçalho da página */
+h1, h2, h3 {
+    color: #b22222; /* Vermelho escuro para dar um toque ao tema "Game of Thrones" */
+    font-family: "Garamond", serif; /* Tipografia clássica */
+}
+/* Estilo para os botões personalizados */
+.btn-primary {
+    background-color: #ffd700; /* Dourado para dar um visual de realeza */
+    border-color: #ffd700;
+}
+.btn-primary:hover {
+    background-color: #daa520; /* Dourado mais escuro ao passar o mouse */
+    border-color: #daa520;
+}
+/* Cards personalizados para as listas de livros, personagens e casas */
+.card {
+    border: 2px solid #8b0000; /* Borda vermelha escura */
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.card-title {
+    color: #4b0082; /* Roxo escuro para títulos de destaque */
+}
+.card-text {
+    font-size: 1.1rem;
+    color: #333; /* Cor padrão para textos */
+}
+/* Estilo para a barra de navegação */
+.navbar-dark .navbar-brand {
+    font-size: 1.8rem;
+    font-family: "Garamond", serif;
+    color: #ffd700; /* Dourado */
+}
+.navbar-dark .nav-link {
+    font-size: 1.1rem;
+    color: #ffd700; /* Dourado para os links do menu */
+}
+.navbar-dark .nav-link:hover {
+    color: #daa520; /* Dourado escuro ao passar o mouse */
+}
+/* Rodapé personalizado */
+.footer {
+    background-color: #8b0000; /* Vermelho escuro para combinar com o tema */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+/* Personalizações para melhorar a responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+    .btn-primary {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .card {
+        margin-bottom: 20px;
+    }
+}

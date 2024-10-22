@@ -1,14 +1,5 @@
 {
     "require": {
-        "bramus/router": "^1.6",
-        "twig/twig": "^3.14",
-        "respect/validation": "^2.3",
-        "voku/anti-xss": "^4.1",
-        "vlucas/phpdotenv": "^5.6"
-    },
-    "autoload": {
-        "psr-4": {
-            "App\\": "app/"
-        }
+        "altorouter/altorouter": "^2.0"
     }
 }

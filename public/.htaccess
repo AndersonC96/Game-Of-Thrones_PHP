@@ -1,7 +1,7 @@
 # Liga o mecanismo de reescrita de URL
 RewriteEngine On
 
-# Redireciona todas as requisições para o index.php
+# Redireciona todas as requisições para o index.php, exceto arquivos e diretórios existentes
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^ index.php [QSA,L]

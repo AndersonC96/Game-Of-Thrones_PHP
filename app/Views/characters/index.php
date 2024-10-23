@@ -9,8 +9,8 @@
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title"><?= htmlspecialchars($character['name'] ?? 'Nome não disponível'); ?></h5>
-                        <p class="card-text">Casa:
+                        <h5 class="card-title"><?= htmlspecialchars($character['name'] ?? 'Nome não disponível'); ?> (<?= htmlspecialchars($character['aliases'][0] ?? 'Nome não disponível'); ?>)</h5>
+                        <p class="card-text"><b>Casa</b>:
                             <?php if (!empty($character['allegiances'])): ?>
                                 <?= htmlspecialchars(implode(', ', $character['allegiances'])); ?>
                             <?php else: ?>

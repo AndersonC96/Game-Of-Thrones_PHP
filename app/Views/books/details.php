@@ -3,10 +3,10 @@
     <div class="card">
         <div class="card-body">
             <h5 class="card-title"><?= htmlspecialchars($book['name']); ?></h5>
-            <p class="card-text">Autor: <?= htmlspecialchars($book['authors'][0]); ?></p>
-            <p class="card-text">Número de páginas: <?= htmlspecialchars($book['numberOfPages']); ?></p>
-            <p class="card-text">Data de lançamento: <?= htmlspecialchars($book['released']) ? htmlspecialchars(date('d/m/Y', strtotime($book['released']))) : 'Data não disponível'; ?></p>
-            <h6>Personagens:</h6>
+            <p class="card-text"><b>Autor</b>: <?= htmlspecialchars($book['authors'][0]); ?></p>
+            <p class="card-text"><b>Número de páginas</b>: <?= htmlspecialchars($book['numberOfPages']); ?></p>
+            <p class="card-text"><b>Data de lançamento</b>: <?= htmlspecialchars($book['released']) ? htmlspecialchars(date('d/m/Y', strtotime($book['released']))) : 'Data não disponível'; ?></p>
+            <h6><b>Personagens</b>:</h6>
             <ul>
                 <?php if (!empty($book['character_names'])): ?>
                     <?php foreach ($book['character_names'] as $characterName): ?>

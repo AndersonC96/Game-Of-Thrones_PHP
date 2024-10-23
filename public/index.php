@@ -17,26 +17,26 @@
         // Rota para a lista de livros
         $controller = new App\Controllers\BookController();
         $controller->index();
-    } elseif (preg_match('/^books\/details\/(\d+)$/', $uri, $matches)) {
-        // Rota para detalhes de um livro específico
+    } elseif ($uri == 'books/details' && isset($_GET['id'])) {
+        // Rota para detalhes de um livro específico via GET
         $controller = new App\Controllers\BookController();
-        $controller->details($matches[1]);
+        $controller->details($_GET['id']);
     } elseif ($uri == 'characters') {
         // Rota para a lista de personagens
         $controller = new App\Controllers\CharacterController();
         $controller->index();
-    } elseif (preg_match('/^characters\/details\/(\d+)$/', $uri, $matches)) {
-        // Rota para detalhes de um personagem específico
+    } elseif ($uri == 'characters/details' && isset($_GET['id'])) {
+        // Rota para detalhes de um personagem específico via GET
         $controller = new App\Controllers\CharacterController();
-        $controller->details($matches[1]);
+        $controller->details($_GET['id']);
     } elseif ($uri == 'houses') {
         // Rota para a lista de casas
         $controller = new App\Controllers\HouseController();
         $controller->index();
-    } elseif (preg_match('/^houses\/details\/(\d+)$/', $uri, $matches)) {
-        // Rota para detalhes de uma casa específica
+    } elseif ($uri == 'houses/details' && isset($_GET['id'])) {
+        // Rota para detalhes de uma casa específica via GET
         $controller = new App\Controllers\HouseController();
-        $controller->details($matches[1]);
+        $controller->details($_GET['id']);
     } else {
         // Página 404 - Não encontrado
         header("HTTP/1.0 404 Not Found");

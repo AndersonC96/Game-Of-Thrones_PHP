@@ -8,25 +8,36 @@
             return json_decode($json, true);
         }
         // Obtém os detalhes de um livro específico pelo ID e os nomes dos personagens
-        public static function getBookById($id) {
+        public static function getBookById($id, $page = 1, $perPage = 9) {
             $url = 'https://www.anapioficeandfire.com/api/books/' . $id;
-            $json = file_get_contents($url);
+            $json = @file_get_contents($url); // Timeout e supressão de avisos
             $book = json_decode($json, true);
-            // Verifica se o livro tem personagens e busca os nomes dos personagens
             if (!empty($book['characters'])) {
                 $book['character_names'] = [];
-                foreach ($book['characters'] as $characterUrl) {
-                    // Faz a requisição para cada personagem
-                    $characterJson = file_get_contents($characterUrl);
-                    $character = json_decode($characterJson, true);
-                    // Adiciona o nome do personagem ao array
-                    if (isset($character['name']) && !empty($character['name'])) {
-                        $book['character_names'][] = $character['name'];
-                    } else {
-                        // Caso o personagem não tenha um nome, adiciona uma string de aviso
-                        $book['character_names'][] = "Nome desconhecido";
+                $totalCharacters = count($book['characters']);
+                $start = ($page - 1) * $perPage;
+                $end = $start + $perPage;
+                $count = 0;
+                // Pega apenas os personagens da página atual
+                for ($i = $start; $i < $end && $i < $totalCharacters; $i++) {
+                    $characterUrl = $book['characters'][$i];
+                    $characterJson = @file_get_contents($characterUrl);
+                    if ($characterJson) {
+                        $character = json_decode($characterJson, true);
+                        if (isset($character['name']) && !empty($character['name'])) {
+                            $book['character_names'][] = $character['name'];
+                        } else {
+                            $book['character_names'][] = "Nome desconhecido";
+                        }
                     }
                 }
+                // Adiciona informações de paginação
+                $book['pagination'] = [
+                    'total' => $totalCharacters,
+                    'page' => $page,
+                    'perPage' => $perPage,
+                    'totalPages' => ceil($totalCharacters / $perPage)
+                ];
             }
             return $book;
         }

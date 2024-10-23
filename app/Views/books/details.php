@@ -4,7 +4,8 @@
         <div class="card-body">
             <h5 class="card-title"><?= htmlspecialchars($book['name']); ?></h5>
             <p class="card-text">Autor: <?= htmlspecialchars($book['authors'][0]); ?></p>
-            <p class="card-text">Data de Publicação: <?= htmlspecialchars($book['released']); ?></p>
+            <p class="card-text">Número de páginas: <?= htmlspecialchars($book['numberOfPages']); ?></p>
+            <p class="card-text">Data de lançamento: <?= htmlspecialchars($book['released']) ? htmlspecialchars(date('d/m/Y', strtotime($book['released']))) : 'Data não disponível'; ?></p>
             <h6>Personagens:</h6>
             <ul>
                 <?php if (!empty($book['character_names'])): ?>

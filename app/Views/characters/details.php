@@ -4,7 +4,7 @@
         <div class="card-body">
             <h5 class="card-title"><?= !empty($character['name']) ? htmlspecialchars($character['name']) : 'Nome não disponível'; ?></h5>
             <p class="card-text"><b>Gênero</b>: <?= !empty($character['gender']) ? htmlspecialchars($character['gender']) : 'Não disponível'; ?></p>
-            <p class="card-text"><b>Cultura</b>: <?= !empty($character['culture']) ? htmlspecialchars($character['culture']) : 'Não disponível'; ?></p>
+            <p class="card-text"><b>Local</b>: <?= !empty($character['culture']) ? htmlspecialchars($character['culture']) : 'Não disponível'; ?></p>
             <p class="card-text"><b>Nascimento</b>: <?= !empty($character['born']) ? htmlspecialchars($character['born']) : 'Não disponível'; ?></p>
             <p class="card-text"><b>Morte</b>: <?= !empty($character['died']) ? htmlspecialchars($character['died']) : 'Não disponível'; ?></p>
             <p class="card-text"><b>Títulos</b>: <?= !empty($character['titles']) ? implode(', ', $character['titles']) : 'Nenhum título'; ?></p>

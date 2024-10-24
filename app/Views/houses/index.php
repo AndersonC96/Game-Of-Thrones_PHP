@@ -6,18 +6,17 @@
                 <div class="card mb-3">
                     <div class="card-body">
                         <h5 class="card-title"><?= !empty($house['name']) ? htmlspecialchars($house['name']) : 'Nome não disponível'; ?></h5>
-                        <p class="card-text">Região: <?= !empty($house['region']) ? htmlspecialchars($house['region']) : 'Região não disponível'; ?></p>
-                        <p class="card-text">Brasão: <?= !empty($house['coatOfArms']) ? htmlspecialchars($house['coatOfArms']) : 'Brasão não disponível'; ?></p>
-                        <p class="card-text">Lema: <?= !empty($house['words']) ? htmlspecialchars($house['words']) : 'Lema não disponível'; ?></p>
-                        <p class="card-text">Lord Atual: <?= !empty($house['currentLordName']) ? htmlspecialchars($house['currentLordName']) : 'Lord não disponível'; ?></p>
-                        <p class="card-text">Overlord: <?= !empty($house['overlordName']) ? htmlspecialchars($house['overlordName']) : 'Overlord não disponível'; ?></p>
+                        <p class="card-text"><b>Região</b>: <?= !empty($house['region']) ? htmlspecialchars($house['region']) : 'Região não disponível'; ?></p>
+                        <p class="card-text"><b>Brasão</b>: <?= !empty($house['coatOfArms']) ? htmlspecialchars($house['coatOfArms']) : 'Brasão não disponível'; ?></p>
+                        <p class="card-text"><b>Lema</b>: <?= !empty($house['words']) ? htmlspecialchars($house['words']) : 'Lema não disponível'; ?></p>
+                        <p class="card-text"><b>Lord Atual</b>: <?= !empty($house['currentLordName']) ? htmlspecialchars($house['currentLordName']) : 'Lord não disponível'; ?></p>
+                        <p class="card-text"><b>Overlord</b>: <?= !empty($house['overlordName']) ? htmlspecialchars($house['overlordName']) : 'Overlord não disponível'; ?></p>
                         <a href="/houses/details?id=<?= urlencode($house['url']); ?>" class="btn btn-primary">Ver detalhes</a>
                     </div>
                 </div>
             </div>
         <?php endforeach; ?>
     </div>
-
     <!-- Paginação -->
     <nav aria-label="Paginação">
         <ul class="pagination">

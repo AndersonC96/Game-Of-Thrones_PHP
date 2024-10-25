@@ -18,11 +18,14 @@
             <p><strong><b>Locais</b>:</strong> <?= !empty($house['seats']) ? implode(', ', $house['seats']) : 'Nenhum título disponível'; ?></p>
             <p><strong>Personagens:</strong></p>
             <ul>
-                <?php foreach ($charactersToShow as $character): ?>
-                    <li><?= htmlspecialchars($character); ?></li>
-                <?php endforeach; ?>
+                <?php if (!empty($charactersToShow)): ?>
+                    <?php foreach ($charactersToShow as $character): ?>
+                        <li><?= htmlspecialchars($character); ?></li>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <li>Nenhum personagem disponível</li>
+                <?php endif; ?>
             </ul>
-
             <!-- Paginação de personagens -->
             <nav aria-label="Paginação de Personagens">
                 <ul class="pagination">
@@ -33,13 +36,11 @@
                             </a>
                         </li>
                     <?php endif; ?>
-
                     <?php for ($i = 1; $i <= $totalCharacterPages; $i++): ?>
                         <li class="page-item <?= $i == $characterPage ? 'active' : ''; ?>">
                             <a class="page-link" href="?id=<?= urlencode($_GET['id']); ?>&characterPage=<?= $i; ?>"><?= $i; ?></a>
                         </li>
                     <?php endfor; ?>
-
                     <?php if ($characterPage < $totalCharacterPages): ?>
                         <li class="page-item">
                             <a class="page-link" href="?id=<?= urlencode($_GET['id']); ?>&characterPage=<?= $characterPage + 1; ?>" aria-label="Próximo">
@@ -49,7 +50,6 @@
                     <?php endif; ?>
                 </ul>
             </nav>
-
             <a href="/houses" class="btn btn-primary">Voltar à lista</a>
         </div>
     </div>

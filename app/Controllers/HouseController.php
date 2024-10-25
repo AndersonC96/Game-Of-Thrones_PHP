@@ -54,7 +54,7 @@
             }
             // Paginação de personagens (swornMembers)
             $charactersPerPage = 5; // Definindo 5 personagens por página
-            $characters = $house['swornMembers'];
+            $characters = !empty($house['swornMembers']) ? $house['swornMembers'] : []; // Garante que o array existe
             $totalCharacters = count($characters);
             $totalCharacterPages = ceil($totalCharacters / $charactersPerPage);
             $characterPage = isset($_GET['characterPage']) ? (int)$_GET['characterPage'] : 1;

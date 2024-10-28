@@ -1,27 +1,33 @@
 <?php
-    namespace App\Controllers;
-    use App\Models\Character;
-    class CharacterController {
-        // Método para listar personagens com paginação e busca
-        public function index() {
-            $search = $_GET['search'] ?? null;
-            $page = $_GET['page'] ?? 1;
-            if ($search) {
-                $characters = Character::searchCharacterByName($search, $page);
-            } else {
-                $characters = Character::getAllCharacters($page);
-            }
-            $content = '../app/Views/characters/index.php';
-            require_once '../app/Views/layouts/layout.php';
+
+namespace App\Controllers;
+
+use App\Models\Character;
+
+class CharacterController
+{
+    public function details()
+    {
+        // Verifica se o ID do personagem foi passado na URL
+        if (!isset($_GET['id'])) {
+            die('ID do personagem não fornecido');
         }
-        // Método para exibir detalhes de um personagem
-        public function details($id) {
-            // Extrai o ID numérico do final da URL
-            $id = basename($id);
-            // Obtém o personagem com base no ID
-            $character = Character::getCharacterById($id);
-            // Define o caminho da view para exibir os detalhes do personagem
-            $content = '../app/Views/characters/details.php';
-            require_once '../app/Views/layouts/layout.php';
+
+        $characterUrl = urldecode($_GET['id']);
+        $character = Character::getCharacterByUrl($characterUrl);
+
+        // Verifica se o personagem foi encontrado
+        if (!$character) {
+            die('Personagem não encontrado.');
         }
+
+        // Busca o nome do pai, se o campo `father` contiver uma URL
+        if (!empty($character['father'])) {
+            $character['fatherName'] = Character::getCharacterOrHouseNameByUrl($character['father']);
+        }
+
+        // Renderiza a view passando as variáveis
+        $content = '../app/Views/characters/details.php';
+        require_once '../app/Views/layouts/layout.php';
     }
+}

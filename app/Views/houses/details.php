@@ -5,7 +5,7 @@
         <div class="card-body">
             <h3><?= !empty($house['name']) ? htmlspecialchars($house['name']) : 'Nome não disponível'; ?></h3>
             <p><strong><b>Fundação</b>:</strong> <?= !empty($house['founded']) ? $house['founded'] : 'Fundação não disponível'; ?></p>
-            <p><strong><b>Fundador</b>:</strong> <?= !empty($house['founder']) ? htmlspecialchars($house['founder']) : 'Fundador não disponível'; ?></p>
+            <p><strong><b>Fundador</b>:</strong> <?= !empty($house['founderName']) ? htmlspecialchars($house['founderName']) : 'Fundador não disponível'; ?></p>
             <p><strong><b>Morte</b>:</strong> <?= !empty($house['diedOut']) ? $house['diedOut'] : 'Morte não disponível'; ?></p>
             <p><strong>Região:</strong> <?= !empty($house['region']) ? htmlspecialchars($house['region']) : 'Região não disponível'; ?></p>
             <p><strong>Brasão:</strong> <?= !empty($house['coatOfArms']) ? htmlspecialchars($house['coatOfArms']) : 'Brasão não disponível'; ?></p>

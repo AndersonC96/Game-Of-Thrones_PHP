@@ -21,6 +21,26 @@
             $json = file_get_contents($url);
             return json_decode($json, true);
         }
+        // Método para buscar detalhes de um personagem pelo URL
+        public static function getCharacterByUrl($url) {
+            $json = file_get_contents($url);
+            if ($json === FALSE) {
+                error_log("Erro ao tentar acessar a URL: $url");
+                return null;
+            }
+            return json_decode($json, true);
+        }
+        // Método para buscar o nome de um personagem ou casa a partir de uma URL
+        public static function getCharacterOrHouseNameByUrl($url) {
+            $json = file_get_contents($url);
+            if ($json === FALSE) {
+                error_log("Erro ao tentar acessar a URL: $url");
+                return 'Nome não disponível';
+            }
+            // Decodifica o JSON e verifica se o campo 'name' está presente
+            $data = json_decode($json, true);
+            return !empty($data['name']) ? $data['name'] : 'Nome não disponível';
+        }
         // Método para obter o nome da casa
         public static function getHouseName($url) {
             $json = @file_get_contents($url);

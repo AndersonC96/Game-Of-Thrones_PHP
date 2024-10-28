@@ -52,6 +52,9 @@
             if (!empty($house['currentLord'])) {
                 $house['currentLordName'] = House::getHouseOrCharacterNameByUrl($house['currentLord']);
             }
+            if (!empty($house['founder'])) {
+                $house['founderName'] = House::getHouseOrCharacterNameByUrl($house['founder']);
+            }
             // Paginação de personagens (swornMembers)
             $charactersPerPage = 5; // Definindo 5 personagens por página
             $characters = !empty($house['swornMembers']) ? $house['swornMembers'] : []; // Garante que o array existe

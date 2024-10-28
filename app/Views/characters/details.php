@@ -22,7 +22,7 @@
                 ?>
             </p>
             <p class="card-text"><b>Apelidos</b>: <?= !empty($character['aliases']) ? implode(', ', $character['aliases']) : 'Nenhum apelido'; ?></p>
-            <p class="card-text"><b>Pai</b>: <?= !empty($character['father']) ? htmlspecialchars($character['father']) : 'Informação não disponível'; ?></p>
+            <p class="card-text"><b>Pai:</b> <?= !empty($character['fatherName']) ? htmlspecialchars($character['fatherName']) : 'Informação não disponível'; ?></p>
             <p class="card-text"><b>Mãe</b>: <?= !empty($character['mother']) ? htmlspecialchars($character['mother']) : 'Informação não disponível'; ?></p>
             <!-- Requisição para obter o nome do(a) esposo(a) -->
             <p class="card-text"><b>Esposa(o)</b>:

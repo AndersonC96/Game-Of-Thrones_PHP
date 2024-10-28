@@ -55,4 +55,14 @@
             $json = file_get_contents($url);
             return json_decode($json, true);
         }
+        public static function searchCharactersByName($name, $page, $limit) {
+            $url = 'https://www.anapioficeandfire.com/api/characters?page=' . $page . '&pageSize=' . $limit . '&name=' . urlencode($name);
+            $json = file_get_contents($url);
+            if ($json === FALSE) {
+                error_log("Erro ao tentar acessar a API: $url");
+                return [];
+            }
+            $characters = json_decode($json, true);
+            return is_array($characters) ? $characters : [];
+        }
     }

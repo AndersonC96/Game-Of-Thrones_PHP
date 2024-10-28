@@ -36,3 +36,46 @@ h1, h3, .navbar-brand {
     color: #e5c100 !important;
     border-bottom: 2px solid #8b0000;
 }
+.card {
+    border: none;
+    border-radius: 8px; /* Bordas arredondadas */
+    overflow: hidden;
+    background-color: #1f1f1f; /* Cor de fundo escura para o conteúdo do card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    transition: transform 0.2s ease-in-out; /* Animação ao passar o mouse */
+}
+.card:hover {
+    transform: scale(1.05); /* Efeito de zoom no hover */
+}
+.card img {
+    width: 100%;
+    height: 180px; /* Tamanho fixo da imagem no topo */
+    object-fit: cover;
+}
+.card-body {
+    padding: 16px;
+    color: #f1f1f1; /* Texto claro para contraste com o fundo escuro */
+}
+.card-title {
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #d4af37; /* Cor do título, mantendo uma cor contrastante e estilosa */
+}
+.card-text {
+    font-size: 0.95em;
+    color: #b3b3b3; /* Cor mais suave para o texto */
+}
+.card a.btn {
+    background-color: #ffd700; /* Botão com cor dourada */
+    color: #1f1f1f; /* Texto do botão em cor escura para contraste */
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 8px 16px;
+    margin-top: 10px;
+    display: inline-block;
+    transition: background-color 0.2s;
+}
+.card a.btn:hover {
+    background-color: #e6b800; /* Efeito no hover do botão */
+}

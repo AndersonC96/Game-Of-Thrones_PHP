@@ -48,3 +48,7 @@ A interface foi construída usando PHP para o backend, Bootstrap para o frontend
 │       └── js              # Scripts JS customizados
 └── README.md               # Documentação do projeto
 ```
+
+# Instalação
+
+1. Clone o repositório:

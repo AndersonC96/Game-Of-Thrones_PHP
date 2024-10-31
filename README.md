@@ -25,10 +25,10 @@ A interface foi construída usando PHP para o backend, Bootstrap para o frontend
 
 # Pré-requisitos
 
-- **PHP (versão 7.4 ou superior)
-- **Composer para gerenciamento de dependências (opcional)
-- **Servidor local como XAMPP, WAMP, ou Laragon
-- **Bootstrap e jQuery já incluídos no projeto
+- **PHP** (versão 7.4 ou superior)
+- **Composer** para gerenciamento de dependências (opcional)
+- Servidor local como **XAMPP**, **WAMP**, ou **Laragon**
+- **Bootstrap** e **jQuery** já incluídos no projeto
 
 # Estrutura do Projeto
 
@@ -51,47 +51,77 @@ A interface foi construída usando PHP para o backend, Bootstrap para o frontend
 
 # Instalação
 
-1. Clone o repositório:
+1. **Clone o repositório**:
 
 ```bash
-git clone https://github.com/seuusuario/got-api-interface.git
-cd got-api-interface
+git clone https://github.com/AndersonC96/Game-Of-Thrones_PHP.git
+cd Game-Of-Thrones_PHP
 ```
 
-2. Instale as dependências:
+2. **Instale as dependências**:
 
 ```bash
-git clone https://github.com/seuusuario/got-api-interface.git
-cd got-api-interface
+git clone https://github.com/AndersonC96/Game-Of-Thrones_PHP.git
+cd Game-Of-Thrones_PHP
 ```
 
-3. Configure o servidor local:
+3. **Configure o servidor local**:
 
-Coloque o projeto em um ambiente de servidor local. Se estiver usando XAMPP, mova-o para a pasta `htdocs`. Acesse `http://localhost/Game-Of-Thrones_PHP` no navegador.
+Coloque o projeto em um ambiente de servidor local. Se estiver usando **XAMPP**, mova-o para a pasta `htdocs`. Acesse `http://localhost/Game-Of-Thrones_PHP` no navegador.
 
-4. Configurando o arquivo `index.php`:
+4. **Configurando o arquivo `index.php`**:
 
 Certifique-se de que o arquivo `public/index.php` aponta corretamente para os controladores e rotas da aplicação.
 
-5. Verifique a API:
+5. **Verifique a API**:
 
 Assegure-se de que a [An API of Ice and Fire](https://anapioficeandfire.com/) esteja acessível, pois o projeto depende dela para obter dados sobre personagens, casas e livros.
 
 # Como Usar
 
-1. Acessando o Projeto:
+1. **Acessando o Projeto**:
 Abra o navegador e vá para `http://localhost/Game-Of-Thrones_PHP`.
 
-2. Navegação:
+2. **Navegação**:
 -**Livros**: Exibe uma lista de livros com título, autor e data de lançamento.
 -**Personagens**: Permite pesquisar personagens pelo nome e ver os detalhes como afiliações e família.
 -**Casas**: Visualize casas com detalhes como região, lema, brasão e membros.
 
-3. Detalhes dos Itens:
+3. **Detalhes dos Itens**:
+
 Clicando em "**Ver detalhes**" em qualquer item da lista, você será redirecionado para uma página com detalhes completos sobre o personagem, casa ou livro selecionado.
 
-4. Paginação e Navegação:
+4. **Paginação e Navegação**:
 Use os botões de paginação na parte inferior das listas para navegar entre os resultados.
 
 # Exemplo de Código
+
 Aqui está um exemplo de como o controlador de personagens é configurado no projeto:
+
+```bash
+namespace App\Controllers;
+
+use App\Models\Character;
+
+class CharacterController {
+    public function index() {
+        // Configurações de paginação
+        $charactersPerPage = 12;
+        $currentPage = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+
+        // Obtém personagens da API
+        $characters = Character::getAllCharacters($currentPage, $charactersPerPage);
+        $content = '../app/Views/characters/index.php';
+        require_once '../app/Views/layouts/layout.php';
+    }
+}
+```
+
+# Customização
+
+O estilo do projeto foi configurado no arquivo `custom.css`, que inclui:
+
+**Tema escuro** para a interface principal
+**Estilos personalizados** para cards, botões e elementos de navegação
+**Efeitos de hover** em botões e cards
+Para personalizar ainda mais, edite o arquivo `public/assets/css/custom.css`.

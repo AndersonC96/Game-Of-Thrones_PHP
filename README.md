@@ -8,7 +8,9 @@
   <img src="https://img.shields.io/badge/Status-Em%20Desenvolvimento-green" alt="Status">
 </p>
 
+<p align="center">
 ![image](https://github.com/user-attachments/assets/6c283560-ef8f-4467-b725-85fcbf3032bd)
+</p>
 
 # Descrição
 

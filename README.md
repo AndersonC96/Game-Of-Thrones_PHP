@@ -9,10 +9,6 @@
 </p>
 
 <p align="center">
-![image](https://github.com/user-attachments/assets/6c283560-ef8f-4467-b725-85fcbf3032bd)
-</p>
-
-<p align="center">
   <img src="https://github.com/user-attachments/assets/6c283560-ef8f-4467-b725-85fcbf3032bd" alt="Game of Thrones Banner" />
 </p>
 

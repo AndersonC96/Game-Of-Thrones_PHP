@@ -12,6 +12,10 @@
 ![image](https://github.com/user-attachments/assets/6c283560-ef8f-4467-b725-85fcbf3032bd)
 </p>
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/6c283560-ef8f-4467-b725-85fcbf3032bd" alt="Game of Thrones Banner" />
+</p>
+
 # Descrição
 
 Este projeto é uma interface web para explorar informações sobre o universo de Game of Thrones, utilizando a [An API of Ice and Fire](https://anapioficeandfire.com/). Ele permite visualizar personagens, casas e livros do universo, com uma navegação amigável, filtros e uma experiência visual estilizada.

@@ -18,10 +18,10 @@ A interface foi construída usando PHP para o backend, Bootstrap para o frontend
 
 # Funcionalidades
 
-- **Exploração de Personagens: Listagem e pesquisa de personagens com paginação.
-- **Visualização de Detalhes: Informações detalhadas sobre personagens, casas e livros.
-- **Filtro de Pesquisa: Filtragem de personagens por nome.
-- **Interface Estilizada: Layout customizado com temas escuros e efeitos visuais.
+- **Exploração de Personagens**: Listagem e pesquisa de personagens com paginação.
+- **Visualização de Detalhes**: Informações detalhadas sobre personagens, casas e livros.
+- **Filtro de Pesquisa**: Filtragem de personagens por nome.
+- **Interface Estilizada**: Layout customizado com temas escuros e efeitos visuais.
 
 # Pré-requisitos
 
@@ -52,3 +52,46 @@ A interface foi construída usando PHP para o backend, Bootstrap para o frontend
 # Instalação
 
 1. Clone o repositório:
+
+```bash
+git clone https://github.com/seuusuario/got-api-interface.git
+cd got-api-interface
+```
+
+2. Instale as dependências:
+
+```bash
+git clone https://github.com/seuusuario/got-api-interface.git
+cd got-api-interface
+```
+
+3. Configure o servidor local:
+
+Coloque o projeto em um ambiente de servidor local. Se estiver usando XAMPP, mova-o para a pasta `htdocs`. Acesse `http://localhost/Game-Of-Thrones_PHP` no navegador.
+
+4. Configurando o arquivo `index.php`:
+
+Certifique-se de que o arquivo `public/index.php` aponta corretamente para os controladores e rotas da aplicação.
+
+5. Verifique a API:
+
+Assegure-se de que a [An API of Ice and Fire](https://anapioficeandfire.com/) esteja acessível, pois o projeto depende dela para obter dados sobre personagens, casas e livros.
+
+# Como Usar
+
+1. Acessando o Projeto:
+Abra o navegador e vá para `http://localhost/Game-Of-Thrones_PHP`.
+
+2. Navegação:
+-**Livros**: Exibe uma lista de livros com título, autor e data de lançamento.
+-**Personagens**: Permite pesquisar personagens pelo nome e ver os detalhes como afiliações e família.
+-**Casas**: Visualize casas com detalhes como região, lema, brasão e membros.
+
+3. Detalhes dos Itens:
+Clicando em "**Ver detalhes**" em qualquer item da lista, você será redirecionado para uma página com detalhes completos sobre o personagem, casa ou livro selecionado.
+
+4. Paginação e Navegação:
+Use os botões de paginação na parte inferior das listas para navegar entre os resultados.
+
+# Exemplo de Código
+Aqui está um exemplo de como o controlador de personagens é configurado no projeto:
